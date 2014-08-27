@@ -179,15 +179,15 @@
 									});
 									yAxis.render();
 
-									// Enable Datapoint Hover Values
-									//var hoverDetail = new Rickshaw.Graph.HoverDetail({
-									//	graph: graph,
-									//	formatter: function(series, x, y) {
-									//		var swatch = '<span class="detail_swatch" style="background-color: ' + series.color + ' padding: 4px;"></span>';
-									//		var content = swatch + "&nbsp;&nbsp;" + parseFloat(y) + '&nbsp;&nbsp;<br>';
-									//		return content;
-									//	}
-									//});
+									 Enable Datapoint Hover Values
+									var hoverDetail = new Rickshaw.Graph.HoverDetail({
+										graph: graph,
+										formatter: function(series, x, y) {
+											var swatch = '<span class="detail_swatch" style="background-color: ' + series.color + ' padding: 4px;"></span>';
+											var content = swatch + "&nbsp;&nbsp;" + parseFloat(y) + '&nbsp;&nbsp;<br>';
+											return content;
+										}
+									});
 
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .slider').prop('id', 'slider-' + feedId + '-' + datastream.id);
 									var slider = new Rickshaw.Graph.RangeSlider({
